@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flicker - Idea Validation Simplified</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-bg: #ffffff;
+            --color-bg-elevated: #f8fafc;
+            --color-bg-elevated-2: #f1f5f9;
+            --color-surface-border: #e2e8f0;
+            --color-surface-border-strong: #cbd5e1;
+            --color-text-primary: #0f172a;
+            --color-text-secondary: #475569;
+            --color-text-muted: #64748b;
+
+            /* Project Colors */
+            --color-accent: #E40000;
+            --color-accent-hover: #E47200;
+            --color-accent-soft: rgba(228, 0, 0, 0.12);
+            --color-accent-glow: rgba(228, 0, 0, 0.18);
+            --color-success: #10b981;
+            --color-danger: #ef4444;
+            --color-danger-strong: #dc2626;
+            --color-info: #0ea5e9;
+            --color-info-strong: #0284c7;
+            --color-shadow: rgba(15, 23, 42, 0.08);
+            --color-shadow-strong: rgba(15, 23, 42, 0.12);
+            --color-shadow-stronger: rgba(15, 23, 42, 0.16);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--color-text-primary);
+            background: var(--color-bg);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+        
+        .logo {
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--color-text-primary);
+            margin-left: 8px;
+        }
+
+        /* Hero Section with Glow */
+        .hero {
+            padding: 120px 0 80px;
+            border-bottom: 1px solid var(--color-surface-border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--color-accent-glow) 0%, rgba(228, 0, 0, 0) 72%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: var(--color-text-primary);
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: var(--color-text-secondary);
+            margin-bottom: 40px;
+            max-width: 700px;
+        }
+
+        .hero-features {
+            display: flex;
+            gap: 32px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--color-text-secondary);
+            font-size: 15px;
+        }
+
+        .hero-feature::before {
+            content: "✓";
+            color: var(--color-success);
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 16px 40px;
+            background: var(--color-accent);
+            color: var(--color-text-primary);
+            text-decoration: none;
+            border: 1px solid transparent;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px var(--color-shadow);
+        }
+
+        .cta-button:hover {
+            background: var(--color-accent-hover);
+            border-color: color-mix(in srgb, var(--color-accent) 40%, transparent);
+            box-shadow: 0 8px 16px color-mix(in srgb, var(--color-accent) 24%, transparent);
+            transform: translateY(-2px);
+        }
+
+        /* Sections and Features */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-alt {
+            background: var(--color-bg-elevated);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 64px;
+        }
+
+        h2 {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 16px;
+            color: var(--color-text-primary);
+            letter-spacing: -0.02em;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+            margin: 64px 0;
+        }
+
+        .feature-card {
+            background: var(--color-bg-elevated);
+            border: 1px solid var(--color-surface-border);
+            border-radius: 12px;
+            padding: 40px;
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px var(--color-shadow-strong);
+            border-color: var(--color-surface-border-strong);
+        }
+
+        .feature-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--color-accent-soft);
+            border: 1px solid color-mix(in srgb, var(--color-accent) 22%, var(--color-surface-border));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 24px;
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--color-text-primary);
+        }
+
+        .feature-card p {
+            color: var(--color-text-secondary);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            padding: 64px 0;
+            border-top: 1px solid var(--color-surface-border);
+        }
+
+        footer nav {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        footer a {
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+            font-weight: 500;
+        }
+
+        footer a:hover {
+            color: var(--color-accent);
+        }
+
+        a {
+            color: var(--color-accent);
+        }
+
+        a:hover {
+            color: var(--color-accent-hover);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 24px;
+            }
+
+            .test-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 80px 0 64px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            h2 {
+                font-size: 32px;
+            }
+
+            section {
+                padding: 64px 0;
+            }
+
+            .hero-features {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="logo">
+                    <!-- No logo available -->
+                    <span>Flicker</span>
+                </div>
+                <h1>Capture and work on your ideas from anywhere.</h1>
+                <p>Exaluate your idea against the business canvas. Determine desirability by identifying customer segments, value propositions, creating hypothesis and testing with deep integrations right from the palm of your hand.</p>
+                
+                <div class="hero-features">
+                    <div class="hero-feature">Frictionless brand creation</div>
+                    <div class="hero-feature">Capture your ideas instantly</div>
+                    <div class="hero-feature">Keep your momentum</div>
+                </div>
+                
+                <a href="#cta" class="cta-button">Get started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section-alt" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why people choose Flicker</h2>
+                <p class="section-subtitle">Highlight your strongest differentiators, product capabilities, or reasons to believe.</p>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Design Guide Generation</h3>
+                    <p>Nail your brand from the start by choosing from a wide range of design directions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✏️</div>
+                    <h3>Idea Capture</h3>
+                    <p>Capture your idea on the go and in the moment with frictionless input.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <h3>Logo Creation</h3>
+                    <p>Get inspired or wowed while you generate the perfect logo to communicate your idea.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <nav>
+                <a href="#features">Features</a>
+                <a href="#cta">Get Started</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
