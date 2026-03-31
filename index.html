@@ -53,9 +53,10 @@
         }
         
         .logo {
-            margin-bottom: 24px;
-            display: flex;
+            margin-bottom: 0;
+            display: inline-flex;
             align-items: center;
+            flex-shrink: 0;
         }
 
         .logo span {
@@ -63,6 +64,18 @@
             font-weight: 600;
             color: var(--color-text-primary);
             margin-left: 8px;
+        }
+        .logo img {
+            height: 150px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .hero-header {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 24px;
         }
 
         /* Hero Section with Glow */
@@ -95,9 +108,10 @@
             font-size: 48px;
             font-weight: 700;
             line-height: 1.2;
-            margin-bottom: 24px;
+            margin-bottom: 0;
             color: var(--color-text-primary);
             letter-spacing: -0.02em;
+            flex: 1;
         }
 
         .hero p {
@@ -304,11 +318,12 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="logo">
-                    <!-- No logo available -->
-                    <span>Flicker</span>
+                <div class="hero-header">
+                    <div class="logo">
+                        <img src="logo.png" alt="Flicker">
+                    </div>
+                    <h1>Capture and work on your ideas from anywhere.</h1>
                 </div>
-                <h1>Capture and work on your ideas from anywhere.</h1>
                 <p>Exaluate your idea against the business canvas. Determine desirability by identifying customer segments, value propositions, creating hypothesis and testing with deep integrations right from the palm of your hand.</p>
                 
                 <div class="hero-features">
