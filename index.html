@@ -1,378 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flicker - Idea Validation Simplified</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flicker</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        :root {
-            --color-bg: #ffffff;
-            --color-bg-elevated: #f8fafc;
-            --color-bg-elevated-2: #f1f5f9;
-            --color-surface-border: #e2e8f0;
-            --color-surface-border-strong: #cbd5e1;
-            --color-text-primary: #0f172a;
-            --color-text-secondary: #475569;
-            --color-text-muted: #64748b;
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #333;
+      color: #FFF;
+    }
 
-            /* Project Colors */
-            --color-accent: #E40000;
-            --color-accent-hover: #E47200;
-            --color-accent-soft: rgba(228, 0, 0, 0.12);
-            --color-accent-glow: rgba(228, 0, 0, 0.18);
-            --color-success: #10b981;
-            --color-danger: #ef4444;
-            --color-danger-strong: #dc2626;
-            --color-info: #0ea5e9;
-            --color-info-strong: #0284c7;
-            --color-shadow: rgba(15, 23, 42, 0.08);
-            --color-shadow-strong: rgba(15, 23, 42, 0.12);
-            --color-shadow-stronger: rgba(15, 23, 42, 0.16);
-        }
+    .banner {
+      display: flex;
+      align-items: center;
+      padding: 16px 32px;
+      background-color: #444;
+      border-bottom: 1px solid #555;
+    }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", sans-serif;
-            font-size: 16px;
-            line-height: 1.7;
-            color: var(--color-text-primary);
-            background: var(--color-bg);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
+    .logo {
+      width: 40px;
+      height: 40px;
+      background-color: #777;
+      border-radius: 8px;
+      padding: 4px;
+      margin-right: 0;
+      object-fit: contain;
+    }
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 32px;
-        }
-        
-        .logo {
-            margin-bottom: 0;
-            display: inline-flex;
-            align-items: center;
-            flex-shrink: 0;
-        }
+    .logo-link {
+      display: flex;
+      align-items: center;
+      margin-right: 12px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
 
-        .logo span {
-            font-size: 20px;
-            font-weight: 600;
-            color: var(--color-text-primary);
-            margin-left: 8px;
-        }
-        .logo img {
-            height: 150px;
-            width: auto;
-            object-fit: contain;
-        }
+    .site-name {
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
 
-        .hero-header {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-            margin-bottom: 24px;
-        }
+    .spacer {
+      flex: 1;
+    }
 
-        /* Hero Section with Glow */
-        .hero {
-            padding: 120px 0 80px;
-            border-bottom: 1px solid var(--color-surface-border);
-            position: relative;
-            overflow: hidden;
-        }
+    .nav-links {
+      display: flex;
+      gap: 24px;
+    }
 
-        .hero::before {
-            content: "";
-            position: absolute;
-            top: -50%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, var(--color-accent-glow) 0%, rgba(228, 0, 0, 0) 72%);
-            pointer-events: none;
-        }
+    .nav-links a {
+      text-decoration: none;
+      color: #EEE;
+      font-size: 0.95rem;
+    }
 
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-        }
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
 
-        .hero h1 {
-            font-size: 48px;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 0;
-            color: var(--color-text-primary);
-            letter-spacing: -0.02em;
-            flex: 1;
-        }
+    .content {
+      padding: 64px 32px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
 
-        .hero p {
-            font-size: 20px;
-            line-height: 1.6;
-            color: var(--color-text-secondary);
-            margin-bottom: 40px;
-            max-width: 700px;
-        }
+    .hero {
+      text-align: center;
+      padding: 80px 0 64px;
+    }
 
-        .hero-features {
-            display: flex;
-            gap: 32px;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-        }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #E40000;
+    }
 
-        .hero-feature {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--color-text-secondary);
-            font-size: 15px;
-        }
+    .hero p {
+      font-size: 1.2rem;
+      color: #CCC;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
 
-        .hero-feature::before {
-            content: "✓";
-            color: var(--color-success);
-            font-weight: 600;
-            font-size: 18px;
-        }
+    .section {
+      margin-top: 64px;
+    }
 
-        .cta-button {
-            display: inline-block;
-            padding: 16px 40px;
-            background: var(--color-accent);
-            color: var(--color-text-primary);
-            text-decoration: none;
-            border: 1px solid transparent;
-            border-radius: 6px;
-            font-size: 16px;
-            font-weight: 600;
-            transition: all 0.3s;
-            box-shadow: 0 4px 6px var(--color-shadow);
-        }
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 24px;
+      color: #FFF;
+    }
 
-        .cta-button:hover {
-            background: var(--color-accent-hover);
-            border-color: color-mix(in srgb, var(--color-accent) 40%, transparent);
-            box-shadow: 0 8px 16px color-mix(in srgb, var(--color-accent) 24%, transparent);
-            transform: translateY(-2px);
-        }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
 
-        /* Sections and Features */
-        section {
-            padding: 80px 0;
-        }
+    .card {
+      background: #444;
+      border: 1px solid #555;
+      border-radius: 12px;
+      padding: 32px 24px;
+      min-height: 160px;
+    }
 
-        .section-alt {
-            background: var(--color-bg-elevated);
-        }
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: #FFF;
+    }
 
-        .section-header {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 64px;
-        }
-
-        h2 {
-            font-size: 40px;
-            font-weight: 700;
-            line-height: 1.3;
-            margin-bottom: 16px;
-            color: var(--color-text-primary);
-            letter-spacing: -0.02em;
-        }
-
-        .section-subtitle {
-            font-size: 18px;
-            color: var(--color-text-secondary);
-            line-height: 1.6;
-        }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 32px;
-            margin: 64px 0;
-        }
-
-        .feature-card {
-            background: var(--color-bg-elevated);
-            border: 1px solid var(--color-surface-border);
-            border-radius: 12px;
-            padding: 40px;
-            transition: all 0.3s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 24px var(--color-shadow-strong);
-            border-color: var(--color-surface-border-strong);
-        }
-
-        .feature-icon {
-            width: 56px;
-            height: 56px;
-            background: var(--color-accent-soft);
-            border: 1px solid color-mix(in srgb, var(--color-accent) 22%, var(--color-surface-border));
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            margin-bottom: 24px;
-        }
-
-        .feature-card h3 {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 12px;
-            color: var(--color-text-primary);
-        }
-
-        .feature-card p {
-            color: var(--color-text-secondary);
-            font-size: 15px;
-            line-height: 1.6;
-        }
-
-        /* Footer */
-        footer {
-            padding: 64px 0;
-            border-top: 1px solid var(--color-surface-border);
-        }
-
-        footer nav {
-            display: flex;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
-
-        footer a {
-            color: var(--color-text-secondary);
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.2s;
-            font-weight: 500;
-        }
-
-        footer a:hover {
-            color: var(--color-accent);
-        }
-
-        a {
-            color: var(--color-accent);
-        }
-
-        a:hover {
-            color: var(--color-accent-hover);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .container {
-                padding: 0 24px;
-            }
-
-            .test-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero {
-                padding: 80px 0 64px;
-            }
-
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            .hero p {
-                font-size: 18px;
-            }
-
-            h2 {
-                font-size: 32px;
-            }
-
-            section {
-                padding: 64px 0;
-            }
-
-            .hero-features {
-                flex-direction: column;
-                gap: 16px;
-            }
-        }
-    </style>
+    .card p {
+      color: #CCC;
+      line-height: 1.5;
+    }
+  </style>
 </head>
 <body>
-    <!-- Hero Section -->
+  <header class="banner">
+    <a href="/" class="logo-link">
+      <img class="logo" src="images/logo-46419724.png" alt="Flicker Logo" />
+    </a>
+    <div class="site-name">Flicker</div>
+
+    <div class="spacer"></div>
+
+    <nav class="nav-links">
+      <!-- <a href="#pricing">Pricing</a>
+      <a href="#about">About</a> -->
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </nav>
+  </header>
+
+  <main class="content">
     <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-header">
-                    <div class="logo">
-                        <img src="logo.png" alt="Flicker">
-                    </div>
-                    <h1>Capture and work on your ideas from anywhere.</h1>
-                </div>
-                <p>Exaluate your idea against the business canvas. Determine desirability by identifying customer segments, value propositions, creating hypothesis and testing with deep integrations right from the palm of your hand.</p>
-                
-                <div class="hero-features">
-                    <div class="hero-feature">Frictionless brand creation</div>
-                    <div class="hero-feature">Capture your ideas instantly</div>
-                    <div class="hero-feature">Keep your momentum</div>
-                </div>
-                
-                <a href="#cta" class="cta-button">Get started</a>
-            </div>
-        </div>
+      <h1>Evaluate Your Ideas Anywhere</h1>
+      <p>
+        Exaluate your idea against the business canvas. Determine desirability by identifying customer segments, value propositions, creating hypothesis and testing with deep integrations right from the palm of your hand.
+      </p>
     </section>
 
-    <!-- Features -->
-    <section class="section-alt" id="features">
-        <div class="container">
-            <div class="section-header">
-                <h2>Why people choose Flicker</h2>
-                <p class="section-subtitle">Highlight your strongest differentiators, product capabilities, or reasons to believe.</p>
-            </div>
-
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
-                    <h3>Design Guide Generation</h3>
-                    <p>Nail your brand from the start by choosing from a wide range of design directions.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">✏️</div>
-                    <h3>Idea Capture</h3>
-                    <p>Capture your idea on the go and in the moment with frictionless input.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⭐</div>
-                    <h3>Logo Creation</h3>
-                    <p>Get inspired or wowed while you generate the perfect logo to communicate your idea.</p>
-                </div>
-            </div>
+    <section class="section" id="products">
+      <h2>Products</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>iOS Application</h3>
+          <p>Native iOS Application so that you can capture and validate your idea from anywhere.</p>
         </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <nav>
-                <a href="#features">Features</a>
-                <a href="#cta">Get Started</a>
-            </nav>
+    <section class="section" id="services">
+      <h2>Services</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Webpage Ingestion</h3>
+          <p>Get started with our tool by importing your existing webpage.</p>
         </div>
-    </footer>
+
+        <div class="card">
+          <h3>Idea Capture</h3>
+          <p>Capture fleeting ideas easily and turn them into reality.</p>
+        </div>
+
+        <div class="card">
+          <h3>Design Guide Creation</h3>
+          <p>Create a design guide on demand to apply consistency to your project/idea.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
