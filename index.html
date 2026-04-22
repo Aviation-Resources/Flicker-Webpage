@@ -37,11 +37,16 @@
           }, 350);
         }, 2000);
       </script>
-      <p>
-        Don't waste your time building something no one wants. Determine the desirability of your idea before you build it.
-        Modern software to help you get crisp about your customers, their problems, and how your idea can solve them.
-        Powerful integrations to distribute your idea obtain, measure interest and tune so you can something you are launcing to waiting customers instead of crickets.
-      </p>
+      <p id="hero-copy"></p>
+
+      <script>
+        const copies = [
+          `Stop building things nobody wants.<br>Validate your idea before you write a single line of code.<br>Know your customer. Test your thesis. Launch to a crowd, not crickets.`,
+          `Most ideas die because nobody tested them.<br>Get ruthlessly clear on your customer, their pains, and your solution. Then put it in front of real people before you build.`,
+          `Your idea is a hypothesis. Prove it first.<br>Identify your customer. Define their pains. Test your solution.<br>Launch to waiting customers — not crickets.`
+        ];
+        document.getElementById("hero-copy").innerHTML = copies[Math.floor(Math.random() * copies.length)];
+      </script>
     </section>
 
     <section class="section" id="products">
