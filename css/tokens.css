@@ -1,0 +1,82 @@
+:root {
+
+  /* ────────────────────────────────────────────────────────
+     BASE TOKENS — raw values, not consumed directly in UI
+     ──────────────────────────────────────────────────────── */
+
+  /* Primary Scale (Red) */
+  --primary-base:              #E40000;
+  --primary-tone:              #C12D2D;
+  --primary-shade:             #7D0000;
+  --primary-tint:              #EB4040;
+
+  /* Complementary Scale (Cyan) */
+  --complementary-base:        #1BFFFF;
+  --complementary-tone:        #3ED2D2;
+  --complementary-shade:       #0F8C8C;
+  --complementary-tint:        #54FFFF;
+
+  /* Neutral Scale — 9 stops from deepest bg to near-white */
+  --neutral-50:                #1A1A1A;   /* Deepest background            */
+  --neutral-100:               #242424;   /* Sunken / inset surfaces       */
+  --neutral-200:               #2E2E2E;   /* Default body background       */
+  --neutral-300:               #383838;   /* Raised surface (cards)        */
+  --neutral-400:               #444444;   /* Banner / nav background       */
+  --neutral-500:               #555555;   /* Borders, dividers             */
+  --neutral-600:               #707070;   /* Disabled text, placeholders   */
+  --neutral-700:               #999999;   /* Secondary / muted text        */
+  --neutral-800:               #CCCCCC;   /* Body text on dark surfaces    */
+  --neutral-900:               #F0F0F0;   /* Primary text / high-emphasis  */
+
+  /* ────────────────────────────────────────────────────────
+     SEMANTIC TOKENS — these are what UI components consume
+     ──────────────────────────────────────────────────────── */
+
+  /* — Backgrounds — */
+  --color-bg-page:             var(--neutral-200);
+  --color-bg-sunken:           var(--neutral-100);
+  --color-bg-surface:          var(--neutral-300);
+  --color-bg-overlay:          var(--neutral-400);
+  --color-bg-hover:            var(--neutral-400);
+
+  /* — Borders — */
+  --color-border-default:      var(--neutral-500);
+  --color-border-subtle:       var(--neutral-300);
+  --color-border-focus:        var(--primary-tint);
+  --color-border-accent:       var(--primary-base);
+
+  /* — Text — */
+  --color-text-primary:        var(--neutral-900);
+  --color-text-secondary:      var(--neutral-800);
+  --color-text-muted:          var(--neutral-700);
+  --color-text-disabled:       var(--neutral-600);
+  --color-text-on-action:      #FFFFFF;
+  --color-text-on-accent:      #111111;
+
+  /* — Actions — */
+  --color-action-default:      var(--primary-base);
+  --color-action-hover:        var(--primary-tone);
+  --color-action-pressed:      var(--primary-shade);
+  --color-action-subtle:       var(--primary-tint);
+
+  /* — Accent — */
+  --color-accent-default:      var(--complementary-base);
+  --color-accent-hover:        var(--complementary-tone);
+  --color-accent-pressed:      var(--complementary-shade);
+  --color-accent-subtle:       var(--complementary-tint);
+
+  /* — Feedback — */
+  --color-feedback-error:      var(--primary-base);
+  --color-feedback-error-bg:   #2A1010;
+  --color-feedback-success:    #22C55E;
+  --color-feedback-success-bg: #0F2A1A;
+  --color-feedback-warning:    #F59E0B;
+  --color-feedback-warning-bg: #2A1F08;
+  --color-feedback-info:       var(--complementary-tone);
+  --color-feedback-info-bg:    #0A2222;
+
+  /* — Headings — */
+  --color-heading-primary:     var(--color-action-default);
+  --color-heading-secondary:   var(--color-text-primary);
+  --color-heading-accent:      var(--color-accent-default);
+}

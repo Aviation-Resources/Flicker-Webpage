@@ -4,145 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Flicker</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #333;
-      color: #FFF;
-    }
-
-    .banner {
-      display: flex;
-      align-items: center;
-      padding: 16px 32px;
-      background-color: #444;
-      border-bottom: 1px solid #555;
-    }
-
-    .logo {
-      width: 40px;
-      height: 40px;
-      background-color: #777;
-      border-radius: 8px;
-      padding: 4px;
-      margin-right: 0;
-      object-fit: contain;
-    }
-
-    .logo-link {
-      display: flex;
-      align-items: center;
-      margin-right: 12px;
-      text-decoration: none;
-      flex-shrink: 0;
-    }
-
-    .site-name {
-      font-size: 1.4rem;
-      font-weight: bold;
-    }
-
-    .spacer {
-      flex: 1;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 24px;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: #EEE;
-      font-size: 0.95rem;
-    }
-
-    .nav-links a:hover {
-      text-decoration: underline;
-    }
-
-    .content {
-      padding: 64px 32px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 80px 0 64px;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      color: #E40000;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      color: #CCC;
-      max-width: 700px;
-      margin: 0 auto;
-      line-height: 1.6;
-    }
-
-    .section {
-      margin-top: 64px;
-    }
-
-    .section h2 {
-      font-size: 2rem;
-      margin-bottom: 24px;
-      color: #FFF;
-    }
-
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 24px;
-    }
-
-    .card {
-      background: #444;
-      border: 1px solid #555;
-      border-radius: 12px;
-      padding: 32px 24px;
-      min-height: 160px;
-    }
-
-    .card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 12px;
-      color: #FFF;
-    }
-
-    .card p {
-      color: #CCC;
-      line-height: 1.5;
-    }
-
-    .card a {
-      display: inline-block;
-      padding: 12px 24px;
-      margin-top: 16px;
-      background-color: #E40000;
-      color: #FFF;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-
-    .card a:hover {
-      background-color: #CC0000;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <header class="banner">
@@ -150,12 +14,8 @@
       <img class="logo" src="images/logo-46419724.png" alt="Flicker Logo" />
     </a>
     <div class="site-name">Flicker</div>
-
     <div class="spacer"></div>
-
     <nav class="nav-links">
-      <!-- <a href="#pricing">Pricing</a>
-      <a href="#about">About</a> -->
       <a href="support.html">Support</a>
       <a href="privacy-policy.html">Privacy Policy</a>
     </nav>
@@ -163,7 +23,7 @@
 
   <main class="content">
     <section class="hero">
-      <h1>Built for <span id="rotating-headline" class="pill pill-rotating">scams</span></h1>
+      <h1>Built for <span id="rotating-headline" class="pill pill-rotating">Entrepreneurs</span></h1>
       <script>
         const words = ["Dreamers", "Doers", "Entrepreneurs", "Solopreneurs", "Visionaries", "Disruptors", "Rebels"];
         const el = document.getElementById("rotating-headline");
@@ -177,22 +37,9 @@
           }, 350);
         }, 2000);
       </script>
-      <style>
-        #rotating-headline.pill-rotating {
-          transition: opacity 0.35s cubic-bezier(.4, 0, .2, 1);
-          display: inline-block;
-          background: var(--trim-primary-light);
-          color: var(--primary-300);
-          border-radius: 999px;
-          padding: 6px 16px;
-          font-weight: 700;
-          border: 1px solid var(--trim-primary-light);
-          font-size: 1em;
-          margin-left: 2px;
-        }
-      </style>
       <p>
-        Exaluate your idea against the business canvas. Determine desirability by identifying customer segments, value propositions, creating hypothesis and testing with deep integrations right from the palm of your hand.
+        Exaluate your idea against the business canvas. Determine desirability by identifying customer segments,
+        value propositions, creating hypothesis and testing with deep integrations right from the palm of your hand.
       </p>
     </section>
 
@@ -202,10 +49,11 @@
         <div class="card">
           <h3>iOS Application</h3>
           <p>Native iOS Application so that you can capture and validate your idea from anywhere.</p>
-          <a href="https://apps.apple.com/us/app/flicker/id6760236493"><img src="images/App-Store-Logo-2013.png"
-              alt="App Store"
-              style="width: 35px; height: auto; margin-right: 8px; vertical-align: middle; border-radius: 4px;" />Get it on
-            the app store!</a>
+          <a href="https://apps.apple.com/us/app/flicker/id6760236493">
+            <img src="images/App-Store-Logo-2013.png" alt="App Store"
+              style="width: 35px; height: auto; margin-right: 8px; vertical-align: middle; border-radius: 4px;" />
+            Get it on the app store!
+          </a>
         </div>
       </div>
     </section>
@@ -217,12 +65,10 @@
           <h3>Webpage Ingestion</h3>
           <p>Get started with our tool by importing your existing webpage.</p>
         </div>
-
         <div class="card">
           <h3>Idea Capture</h3>
           <p>Capture fleeting ideas easily and turn them into reality.</p>
         </div>
-
         <div class="card">
           <h3>Design Guide Creation</h3>
           <p>Create a design guide on demand to apply consistency to your project/idea.</p>
