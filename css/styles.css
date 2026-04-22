@@ -188,3 +188,16 @@ body {
 .card a:active {
   background-color: var(--color-action-pressed);
 }
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 3.2rem;
+  }
+
+  #rotating-headline.pill-rotating {
+    display: block;
+    margin: 8px auto 0;
+    text-align: center;
+    width: fit-content;
+  }
+}
