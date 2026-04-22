@@ -199,5 +199,7 @@ body {
     margin: 8px auto 0;
     text-align: center;
     width: fit-content;
+    max-width: calc(100vw - 64px);
+    font-size: 0.85em;
   }
 }
