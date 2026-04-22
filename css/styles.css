@@ -100,6 +100,27 @@ body {
     inset 0 0 8px rgba(62, 210, 210, 0.08);
 }
 
+/* ── Primary Button ──────────────────────────────────────── */
+
+
+.btn-appstore img {
+  height: 54px;
+  width: auto;
+  display: block;
+  margin: 40px auto 0;
+  border-radius: 12px;
+  box-shadow:
+    0 0 10px var(--primary-tone),
+    0 0 28px var(--primary-shade);
+  transition: box-shadow 0.3s ease;
+}
+
+.btn-appstore:hover img {
+  box-shadow:
+    0 0 14px var(--primary-base),
+    0 0 36px var(--primary-tone);
+}
+
 /* ── Sections ────────────────────────────────────────────── */
 .section {
   margin-top: 64px;
@@ -147,30 +168,6 @@ body {
   font-size: 0.95rem;
 }
 
-/* ── CTA Button ──────────────────────────────────────────── */
-.card a {
-  display: inline-flex;
-  align-items: center;
-  padding: 12px 24px;
-  margin-top: 16px;
-  background-color: var(--color-action-default);
-  color: var(--color-text-on-action);
-  text-decoration: none;
-  border-radius: 6px;
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 500;
-  font-size: 0.95rem;
-  transition: background-color 0.2s ease;
-}
-
-.card a:hover {
-  background-color: var(--color-action-hover);
-  color: var(--color-text-on-action);
-}
-
-.card a:active {
-  background-color: var(--color-action-pressed);
-}
 
 @media (max-width: 768px) {
   .hero h1 {
