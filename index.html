@@ -163,7 +163,34 @@
 
   <main class="content">
     <section class="hero">
-      <h1>Evaluate Your Ideas Anywhere</h1>
+      <h1>Built for <span id="rotating-headline" class="pill pill-rotating">scams</span></h1>
+      <script>
+        const words = ["Dreamers", "Doers", "Entrepreneurs", "Solopreneurs", "Visionaries", "Disruptors", "Rebels"];
+        const el = document.getElementById("rotating-headline");
+        let idx = 0;
+        setInterval(() => {
+          el.style.opacity = 0;
+          setTimeout(() => {
+            idx = (idx + 1) % words.length;
+            el.textContent = words[idx];
+            el.style.opacity = 1;
+          }, 350);
+        }, 2000);
+      </script>
+      <style>
+        #rotating-headline.pill-rotating {
+          transition: opacity 0.35s cubic-bezier(.4, 0, .2, 1);
+          display: inline-block;
+          background: var(--trim-primary-light);
+          color: var(--primary-300);
+          border-radius: 999px;
+          padding: 6px 16px;
+          font-weight: 700;
+          border: 1px solid var(--trim-primary-light);
+          font-size: 1em;
+          margin-left: 2px;
+        }
+      </style>
       <p>
         Exaluate your idea against the business canvas. Determine desirability by identifying customer segments, value propositions, creating hypothesis and testing with deep integrations right from the palm of your hand.
       </p>
