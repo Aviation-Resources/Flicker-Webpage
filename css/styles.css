@@ -102,7 +102,6 @@ body {
 
 /* ── Primary Button ──────────────────────────────────────── */
 
-
 .btn-appstore img {
   height: 54px;
   width: auto;
@@ -121,52 +120,6 @@ body {
     0 0 36px var(--primary-tone);
 }
 
-/* ── Sections ────────────────────────────────────────────── */
-.section {
-  margin-top: 64px;
-}
-
-.section h2 {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 2.4rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  margin-bottom: 24px;
-  color: var(--color-heading-secondary);
-}
-
-/* ── Cards ───────────────────────────────────────────────── */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 24px;
-}
-
-.card {
-  background: var(--color-bg-surface);
-  border: 1px solid var(--color-border-default);
-  border-radius: 12px;
-  padding: 32px 24px;
-  min-height: 160px;
-}
-
-.card h3 {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 1.4rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-  color: var(--color-text-primary);
-}
-
-.card p {
-  font-family: 'DM Sans', sans-serif;
-  color: var(--color-text-secondary);
-  line-height: 1.6;
-  font-size: 0.95rem;
-}
 
 
 @media (max-width: 768px) {
@@ -265,4 +218,85 @@ body {
   .banner {
     position: relative;
   }
+}
+
+/* ── Screenshot Carousel ─────────────────────────────────── */
+.screenshots-heading {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  color: var(--color-heading-secondary);
+  text-align: center;
+}
+ 
+.carousel-track-wrapper {
+  overflow-x: auto;
+  overflow-y: visible;
+  padding-bottom: 16px;
+  /* hide scrollbar on all browsers but keep functionality */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  /* extend past content padding so cards reach edge on mobile */
+  margin-left: -32px;
+  margin-right: -32px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+ 
+.carousel-track-wrapper::-webkit-scrollbar {
+  display: none;
+}
+ 
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  min-width: 100%;
+  width: max-content;
+  justify-content: center;
+  /* give vertical breathing room so box-shadow isn't clipped */
+  padding: 12px 4px;
+}
+ 
+.screenshot-card {
+  flex-shrink: 0;
+  width: 220px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border-default);
+  box-shadow:
+    0 0 0 1px var(--color-border-subtle),
+    0 8px 32px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+ 
+.screenshot-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow:
+    0 0 0 1px var(--color-border-default),
+    0 16px 40px rgba(0, 0, 0, 0.5);
+}
+ 
+.screenshot-card img {
+  width: 100%;
+  /* standard portrait ratio for iPhone screenshots */
+  aspect-ratio: 9 / 19.5;
+  display: block;
+  object-fit: cover;
+  /* placeholder appearance when image is missing */
+  background: var(--neutral-300);
+}
+ 
+/* fallback tinted placeholder when src is broken / not yet set */
+.screenshot-card img[src*="placeholder"] {
+  background: linear-gradient(
+    160deg,
+    var(--neutral-300) 0%,
+    var(--neutral-100) 100%
+  );
+  min-height: 440px;
 }
