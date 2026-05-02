@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="images/favicon.png"/>
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flicker</title>
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="banner">
+    <a href="/" class="logo-link">
+      <img class="logo" src="<logoplaceholder>" alt="<logoalttext>" />
+    </a>
+    <div class="site-name">Flicker</div>
+    <div class="spacer"></div>
+    <nav class="nav-links">
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-menu">
+        <a href="pages/support.html">Support</a>
+        <a href="pages/privacy-policy.html">Privacy Policy</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section class="hero">
+      <h1>Built for <span id="rotating-headline" class="pill pill-rotating">"customersegment"</span></h1>
+      <script>
+        const words = ["<customersegment-1>", "customersegment-2", "customersegment-3", "customersegment-4", "customersegment-5", "customersegment-6", "customersegment-7"];
+        const el = document.getElementById("rotating-headline");
+        let idx = 0;
+        setInterval(() => {
+          el.style.opacity = 0;
+          setTimeout(() => {
+            idx = (idx + 1) % words.length;
+            el.textContent = words[idx];
+            el.style.opacity = 1;
+          }, 350);
+        }, 2000);
+      </script>
+      <p id="hero-copy"></p>
+
+      <script>
+        const copies = [
+          `<herocopy-1>`,
+          `<herocopy-2>`,
+          `<herocopy-3>`
+        ];
+        document.getElementById("hero-copy").innerHTML = copies[Math.floor(Math.random() * copies.length)];
+      </script>
+    </section>
+    <section class="section" id="value-propositions">
+        // Value propositions cards go here
+    </section>
+    <section class="section" id="services">
+        // Services cards go here
+    </section>
+  </main>
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.querySelector('.nav-menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('nav-menu--open');
+      toggle.classList.toggle('nav-toggle--open');
+    });
+  </script>
+</body>
+</html>
