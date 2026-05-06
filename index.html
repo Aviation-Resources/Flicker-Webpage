@@ -24,6 +24,7 @@
         <span></span>
       </button>
       <div class="nav-menu">
+        <a href="pages/pricing.html">Pricing</a>
         <a href="pages/support.html">Support</a>
         <a href="pages/privacy-policy.html">Privacy Policy</a>
       </div>
@@ -46,21 +47,33 @@
           }, 350);
         }, 2000);
       </script>
-      <p id="hero-copy"></p>
-
-      <script>
-        const copies = [
-          `Stop building things nobody wants.<br>Validate your idea before you write a single line of code.<br>Know your customer. Test your thesis. Launch to a crowd, not crickets.`,
-          `Most ideas die because nobody tested them.<br>Get ruthlessly clear on your customer, their pains, and your solution. Then put it in front of real people before you build.`,
-          `Your idea is a hypothesis. Prove it first.<br>Identify your customer. Define their pains. Test your solution.<br>Launch to waiting customers — not crickets.`
-        ];
-        document.getElementById("hero-copy").innerHTML = copies[Math.floor(Math.random() * copies.length)];
-      </script>
+      <div class="value-carousel">
+        <div class="value-carousel__track" id="value-carousel-track">
+          <article class="value-card">
+            <h2 class="value-card__hook">Most ideas die in over-engineered drafts that never ship.</h2>
+            <p class="value-card__prop">Flicker keeps your scope honest with quick, low-risk feedback cycles so you iterate on real signal — not in a void.</p>
+          </article>
+          <article class="value-card">
+            <h2 class="value-card__hook">Building without validation is the most expensive way to be wrong.</h2>
+            <p class="value-card__prop">Define your customer, prove the problem, and test the solution before you write a single line of code.</p>
+          </article>
+          <article class="value-card">
+            <h2 class="value-card__hook">Your idea is a hypothesis. Prove it before you ship.</h2>
+            <p class="value-card__prop">Get a logo, a landing page, and a sharpened value prop in front of real users in hours — not months.</p>
+          </article>
+          <article class="value-card">
+            <h2 class="value-card__hook">The hardest part of a launch isn't building — it's finding the first ten.</h2>
+            <p class="value-card__prop">Flicker maps where your customers hang out and helps you engage authentically before launch day.</p>
+          </article>
+        </div>
+        <div class="value-carousel__dots" id="value-carousel-dots"></div>
+      </div>
+      <script src="js/value-carousel.js"></script>
       <a href="https://apps.apple.com/us/app/flicker/id6760236493" class="btn-appstore">
         <img src="images/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg" alt="Download on the App Store" />
       </a>
     </section>
-    <section class="section" id="screenshots">
+    <section id="screenshots">
         <h2 class="screenshots-heading">See It In Action</h2>
         <div class="carousel-track-wrapper">
           <div class="carousel-track">
@@ -79,14 +92,91 @@
           </div>
         </div>
       </section>
+      <section id="services">
+        <h2 class="section-heading">What Flicker Does</h2>
+        <div class="services-grid">
+          <article class="service-card">
+            <span class="service-card__icon"><i data-lucide="lightbulb"></i></span>
+            <h3 class="service-card__title">Idea Capture</h3>
+            <p class="service-card__desc">Some of the best ideas come in fleeting moments and can be forgotten. With Flicker you can not only record your idea but get a design and initial logo all before you can forget it.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-card__icon"><i data-lucide="globe"></i></span>
+            <h3 class="service-card__title">Webpage Ingestion</h3>
+            <p class="service-card__desc">Already have the workings of a new venture? Pull it into Flicker's tool set just by providing the link.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-card__icon"><i data-lucide="palette"></i></span>
+            <h3 class="service-card__title">Primary Color Picker</h3>
+            <p class="service-card__desc">All good brands and designs are built off of a primary color. Choose yours from a thought-provoking suggestion, digital color meter, or from your environment using your camera.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-card__icon"><i data-lucide="image"></i></span>
+            <h3 class="service-card__title">Image Generation</h3>
+            <p class="service-card__desc">From logos to illustrations, generate branded images to capture your users' attention.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-card__icon"><i data-lucide="users"></i></span>
+            <h3 class="service-card__title">Customer Segment Refinement</h3>
+            <p class="service-card__desc">Use Flicker's tools to figure out what your customers do, their pain points, and what they can gain from your solution.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-card__icon"><i data-lucide="target"></i></span>
+            <h3 class="service-card__title">Value Proposition Refinement</h3>
+            <p class="service-card__desc">Flicker will help you figure out the right products and services to address customer pain points and deliver gains.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-card__icon"><i data-lucide="pen-tool"></i></span>
+            <h3 class="service-card__title">Design Guide Creation</h3>
+            <p class="service-card__desc">Get crisp on your design to establish trust and credibility while users move through your funnels.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-card__icon"><i data-lucide="layout-template"></i></span>
+            <h3 class="service-card__title">Landing Page Creation</h3>
+            <p class="service-card__desc">Get something up on the internet where potential users can land so you can start evaluating your value propositions.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-card__icon"><i data-lucide="message-circle"></i></span>
+            <h3 class="service-card__title">Customer Discovery on Reddit</h3>
+            <p class="service-card__desc">Find where your users hang out on Reddit so you can engage authentically with them.</p>
+          </article>
+        </div>
+      </section>
+      <section id="gains">
+        <h2 class="section-heading">What You Gain</h2>
+        <div class="gains-grid">
+          <article class="gain-card">
+            <span class="gain-card__icon"><i data-lucide="sparkles"></i></span>
+            <h3 class="gain-card__title">Consistent Design and Branding</h3>
+            <p class="gain-card__desc">Achieve cohesive visual and messaging branding that resonates with your audience, establishing a strong first impression and brand loyalty.</p>
+          </article>
+          <article class="gain-card">
+            <span class="gain-card__icon"><i data-lucide="messages-square"></i></span>
+            <h3 class="gain-card__title">Clear Stakeholder Communication</h3>
+            <p class="gain-card__desc">Facilitate better communication and decision-making by providing a shared understanding of the product vision and user needs.</p>
+          </article>
+          <article class="gain-card">
+            <span class="gain-card__icon"><i data-lucide="compass"></i></span>
+            <h3 class="gain-card__title">User Discovery</h3>
+            <p class="gain-card__desc">Use targeted marketing and partnerships to identify and engage your earliest adopters — a real-world signal to validate your product concept.</p>
+          </article>
+          <article class="gain-card">
+            <span class="gain-card__icon"><i data-lucide="shield-check"></i></span>
+            <h3 class="gain-card__title">Reduced Risk</h3>
+            <p class="gain-card__desc">By taking the edge off the hardest parts of entrepreneurship, Flicker reduces the risk of building something no one wants.</p>
+          </article>
+          <article class="gain-card">
+            <span class="gain-card__icon"><i data-lucide="contact"></i></span>
+            <h3 class="gain-card__title">Comprehensive Persona Mapping</h3>
+            <p class="gain-card__desc">Build detailed user personas to better understand your target audience and tailor your offerings accordingly.</p>
+          </article>
+        </div>
+      </section>
   </main>
+  <script src="js/nav.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <script>
-    const toggle = document.querySelector('.nav-toggle');
-    const menu = document.querySelector('.nav-menu');
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('nav-menu--open');
-      toggle.classList.toggle('nav-toggle--open');
-    });
+    lucide.createIcons();
   </script>
 </body>
 </html>

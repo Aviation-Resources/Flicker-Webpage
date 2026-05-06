@@ -1,177 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/png" href="../images/favicon.png"/>
+  <link rel="apple-touch-icon" href="../images/apple-touch-icon.png" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Support</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #f7f7f7;
-      color: #222;
-      line-height: 1.6;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 64px 32px;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 16px;
-    }
-
-    .subtitle {
-      color: #777;
-      margin-bottom: 40px;
-    }
-
-    h2 {
-      margin-top: 40px;
-      margin-bottom: 12px;
-      font-size: 1.5rem;
-    }
-
-    p {
-      margin-bottom: 16px;
-      color: #444;
-    }
-
-    a {
-      color: #0066cc;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .contact-box {
-      background: #fff;
-      border: 1px solid #e0e0e0;
-      border-radius: 8px;
-      padding: 24px 28px;
-      margin-bottom: 16px;
-    }
-
-    .contact-box p {
-      margin-bottom: 8px;
-    }
-
-    .contact-box p:last-child {
-      margin-bottom: 0;
-    }
-
-    .faq-item {
-      background: #fff;
-      border: 1px solid #e0e0e0;
-      border-radius: 8px;
-      margin-bottom: 12px;
-      overflow: hidden;
-    }
-
-    .faq-question {
-      width: 100%;
-      background: none;
-      border: none;
-      text-align: left;
-      padding: 18px 24px;
-      font-size: 1rem;
-      font-weight: 600;
-      color: #222;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .faq-question:hover {
-      background: #f7f7f7;
-    }
-
-    .faq-icon {
-      font-size: 1.25rem;
-      font-weight: 300;
-      color: #777;
-      transition: transform 0.2s;
-      flex-shrink: 0;
-      margin-left: 12px;
-    }
-
-    .faq-item.open .faq-icon {
-      transform: rotate(45deg);
-    }
-
-    .faq-answer {
-      display: none;
-      padding: 0 24px 18px;
-      color: #444;
-    }
-
-    .faq-item.open .faq-answer {
-      display: block;
-    }
-
-    .back-link {
-      display: inline-block;
-      margin-top: 48px;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/tokens.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
-  <main class="container">
-    <h1>Support</h1>
-    <p class="subtitle">We're here to help. Browse the FAQs below or reach out directly.</p>
-
-    <h2>Contact Us</h2>
-    <div class="contact-box">
-      <p>Have a question or need help? Send us an email and we'll get back to you as soon as possible.</p>
-      <p><strong>Email:</strong> <a href="mailto:support@productwheels.com">support@productwheels.com</a></p>
-    </div>
-
-    <h2>Frequently Asked Questions</h2>
-
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFAQ(this)">
-        How do I get started?
-        <span class="faq-icon">+</span>
+  <header class="banner">
+    <a href="../index.html" class="logo-link">
+      <img class="logo" src="../images/logo-46419724.png" alt="Flicker Logo" />
+    </a>
+    <div class="site-name">Flicker</div>
+    <div class="spacer"></div>
+    <nav class="nav-links">
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
-      <div class="faq-answer">
-        <p>Follow the link on the main page to download the app from the Apple App store.</p>
+      <div class="nav-menu">
+        <a href="pricing.html">Pricing</a>
+        <a href="support.html">Support</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="content">
+    <div class="page-content">
+      <h1>Support</h1>
+      <p class="subtitle">We're here to help. Browse the FAQs below or reach out directly.</p>
+
+      <h2>Contact Us</h2>
+      <div class="contact-box">
+        <p>Have a question or need help? Send us an email and we'll get back to you as soon as possible.</p>
+        <p><strong>Email:</strong> <a href="mailto:support@productwheels.com">support@productwheels.com</a></p>
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          How do I get started?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Follow the link on the main page to download the app from the Apple App Store.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          Do I need to make an account?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>No, that seems like a friction point for you and liability for us.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          What do I have to pay for?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>In the app we generate high-quality photos for you with the right context. We charge a few dollars for you to keep the photo(s).</p>
+        </div>
       </div>
     </div>
-
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFAQ(this)">
-        Do I need to make an account?
-        <span class="faq-icon">+</span>
-      </button>
-      <div class="faq-answer">
-        <p>No, that seems like a friction point for you and liability for us.</p>
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFAQ(this)">
-        What do I have to pay for?
-        <span class="faq-icon">+</span>
-      </button>
-      <div class="faq-answer">
-        <p>In the app we generate high quality photos for you with the right context. We change a few dollars for you to keep the photo(s).</p>
-      </div>
-    </div>
-
-    <a class="back-link" href="../index.html">← Back to Home</a>
   </main>
 
+  <script src="../js/nav.js"></script>
   <script>
     function toggleFAQ(button) {
       const item = button.closest('.faq-item');

@@ -1,0 +1,296 @@
+{
+  "createdAt" : 798952397.146904,
+  "products" : [
+    {
+      "name" : "iOS Application",
+      "id" : "713CBAD0-6240-4FF9-BBD1-4B8DE8BF7259",
+      "productDescription" : "Gives you access to Flickers tools on the go with the highest performance and privacy standards.",
+      "createdAt" : 799737564.767786
+    },
+    {
+      "name" : "MacOS application",
+      "id" : "369D6293-DA49-4AD4-922E-44D9E46D773A",
+      "productDescription" : "Gives you a desktop class experience so you can build your idea without compromise.",
+      "createdAt" : 799737640.66766
+    }
+  ],
+  "customerJobs" : [
+    {
+      "name" : "Entrepreneurship",
+      "createdAt" : 799736879.388087,
+      "briefDescription" : "Creating, testing and refining business ideas."
+    },
+    {
+      "name" : "Solopreneurship",
+      "createdAt" : 799736989.959274,
+      "briefDescription" : "Creating and running a small business alone"
+    },
+    {
+      "name" : "Marketing",
+      "createdAt" : 799737038.59811,
+      "briefDescription" : "Getting the project in front of real potential user to determine desirability."
+    },
+    {
+      "name" : "MVP development",
+      "createdAt" : 799737101.07256,
+      "briefDescription" : "Building a minimum viable product to help determine desirability"
+    }
+  ],
+  "services" : [
+    {
+      "name" : "Idea capture",
+      "id" : "81ACF08E-EB56-422C-AAFC-1B550176F55A",
+      "createdAt" : 799738635.800702,
+      "serviceDescription" : "Some of the best ideas come in fleeting moment and can be forgotten. Now, with flicker you can not only record your idea but get a design and initial logo all before you can forget it."
+    },
+    {
+      "name" : "Webpage ingestion",
+      "id" : "AD305098-1CCA-4FAD-BA1F-8F847CE81BDB",
+      "createdAt" : 799738703.046712,
+      "serviceDescription" : "Already have the workings of a new venture? Pull it into Flickers tool set just by providing the link."
+    },
+    {
+      "name" : "Primary color picker",
+      "id" : "E5A40BB3-94A8-49AB-A244-23D828521347",
+      "createdAt" : 799738875.463705,
+      "serviceDescription" : "All good brands and designs are built off of a primary color. Choose yours from a thought provoking suggestion, digital color meter, or from your environment using your camera."
+    },
+    {
+      "name" : "Image generation",
+      "id" : "DBA1F8CE-6028-4A46-A1FA-533BEC8639DA",
+      "createdAt" : 799738948.502821,
+      "serviceDescription" : "From logos to illustrations, generated branded images to capture your users attention."
+    },
+    {
+      "name" : "Customer segment refinement",
+      "id" : "E11B8299-487E-41C1-934D-102BAF80F9AB",
+      "createdAt" : 799739118.758568,
+      "serviceDescription" : "User Flickers tools to figure out what your customers do, their pain points, and what they can gain from your solution."
+    },
+    {
+      "name" : "Value proposition refinement",
+      "id" : "9B4D065F-1548-4F57-BA95-D5A3C5A5AAF2",
+      "createdAt" : 799739225.592181,
+      "serviceDescription" : "Flicker will help you figure out the right products and services to address customer pain points and deliver gains."
+    },
+    {
+      "name" : "Design guide creation",
+      "id" : "B3541AEF-DDA2-4A2F-BA89-4169BB9FAC44",
+      "createdAt" : 799739353.612829,
+      "serviceDescription" : "Get crisp on your design to establish trust and credibility while users move through your funnels."
+    },
+    {
+      "name" : "Landing page creation",
+      "id" : "604C98F1-B5D7-48AD-A2F0-27711CD36D26",
+      "createdAt" : 799739483.854149,
+      "serviceDescription" : "Get something up on the internet where potential users can land so you can start evaluating your value propositions."
+    },
+    {
+      "name" : "Customer discovery on Reddit",
+      "id" : "D2A76B9F-1130-4F8B-AB00-2E91E135279F",
+      "createdAt" : 799739553.029644,
+      "serviceDescription" : "Find where your users hang out on Reddit so you can engage authentically with them"
+    }
+  ],
+  "valuePropositions" : [
+    {
+      "id" : "E5903D85-6435-4276-81F0-0C88136BDE51",
+      "hook" : "Entrepreneurs often struggle with over-engineering and procrastination.",
+      "createdAt" : 799740232.190924,
+      "proposition" : "Flicker helps entrepreneurs validate their ideas by enabling quick, low-risk feedback cycles so you can iterate on real signal not in a void."
+    }
+  ],
+  "pains" : [
+    {
+      "name" : "Lack of Market Validation",
+      "createdAt" : 799737671.418809,
+      "briefDescription" : "Entrepreneurs often spend significant time and resources developing ideas without proper market validation, leading to wasted efforts on unprofitable or irrelevant products."
+    },
+    {
+      "name" : "Over-engineering and Procrastination",
+      "createdAt" : 799737693.097723,
+      "briefDescription" : "Many entrepreneurs complicate initial product offerings to meet a perceived need, instead of focusing initially on core value proposition to avoid development overextension and procrastination."
+    },
+    {
+      "name" : "Slow iteration cycles",
+      "createdAt" : 799737773.518957,
+      "briefDescription" : "Without the right tools it’s slow to obtain feedback and iterate on the product market fit."
+    },
+    {
+      "name" : "Inability to find initial users",
+      "createdAt" : 799737903.349163,
+      "briefDescription" : "When starting something new it’s hard to find where customers are to solicit feedback"
+    },
+    {
+      "name" : "Inconsistent design",
+      "createdAt" : 799737994.8253,
+      "briefDescription" : "When soliciting feedback having consistent design is key to establishing credibility"
+    },
+    {
+      "name" : "Poor branding",
+      "createdAt" : 799738056.912406,
+      "briefDescription" : "When building something new it’s hard to establish a brand and voice that resonates with potential customers"
+    },
+    {
+      "name" : "Procrastination",
+      "createdAt" : 799738228.208585,
+      "briefDescription" : "Getting crisp on a vision involves iteration and refinements. Over time this creates fatigue that can lead to procrastination."
+    },
+    {
+      "name" : "Lack of signal",
+      "createdAt" : 799738369.01406,
+      "briefDescription" : "If you can’t ship something to show users you cannot have any chance at getting a signal to validate your direction."
+    },
+    {
+      "name" : "Writers block",
+      "createdAt" : 799738478.749194,
+      "briefDescription" : "When marketing to potential customers it’s easy to get stuck figuring out what to say to earn attention."
+    }
+  ],
+  "pitch" : "Built for Entrepreneurs — Stop building things nobody wants. Validate your idea before you write a single line of code. Know your customer. Test your thesis. Launch to a crowd, not crickets.",
+  "primaryColor" : {
+    "tint" : {
+      "needsWhiteText" : false,
+      "hex" : "#EB4040",
+      "normalized" : {
+        "g" : 0.25,
+        "b" : 0.25,
+        "r" : 0.921
+      },
+      "components" : {
+        "g" : 64,
+        "b" : 64,
+        "r" : 235
+      }
+    },
+    "tone" : {
+      "needsWhiteText" : true,
+      "hex" : "#C12D2D",
+      "normalized" : {
+        "r" : 0.756,
+        "b" : 0.175,
+        "g" : 0.175
+      },
+      "components" : {
+        "r" : 193,
+        "b" : 45,
+        "g" : 45
+      }
+    },
+    "base" : {
+      "components" : {
+        "r" : 228,
+        "b" : 0,
+        "g" : 0
+      },
+      "needsWhiteText" : true,
+      "normalized" : {
+        "r" : 0.894,
+        "b" : 0,
+        "g" : 0
+      },
+      "hex" : "#E40000"
+    },
+    "shade" : {
+      "components" : {
+        "g" : 0,
+        "b" : 0,
+        "r" : 125
+      },
+      "needsWhiteText" : true,
+      "normalized" : {
+        "g" : 0,
+        "b" : 0,
+        "r" : 0.492
+      },
+      "hex" : "#7D0000"
+    }
+  },
+  "complementaryColor" : {
+    "base" : {
+      "normalized" : {
+        "g" : 1,
+        "r" : 0.106,
+        "b" : 1
+      },
+      "components" : {
+        "g" : 255,
+        "r" : 27,
+        "b" : 255
+      },
+      "hex" : "#1BFFFF",
+      "needsWhiteText" : false
+    },
+    "shade" : {
+      "normalized" : {
+        "r" : 0.058,
+        "b" : 0.55,
+        "g" : 0.55
+      },
+      "components" : {
+        "r" : 15,
+        "b" : 140,
+        "g" : 140
+      },
+      "hex" : "#0F8C8C",
+      "needsWhiteText" : false
+    },
+    "tone" : {
+      "normalized" : {
+        "r" : 0.244,
+        "g" : 0.825,
+        "b" : 0.825
+      },
+      "components" : {
+        "r" : 62,
+        "g" : 210,
+        "b" : 210
+      },
+      "hex" : "#3ED2D2",
+      "needsWhiteText" : false
+    },
+    "tint" : {
+      "normalized" : {
+        "g" : 1,
+        "r" : 0.329,
+        "b" : 1
+      },
+      "components" : {
+        "g" : 255,
+        "r" : 84,
+        "b" : 255
+      },
+      "hex" : "#54FFFF",
+      "needsWhiteText" : false
+    }
+  },
+  "lastViewed" : 799792541.203576,
+  "name" : "Flicker",
+  "gains" : [
+    {
+      "name" : "Consistent Design and Branding",
+      "createdAt" : 799739611.786157,
+      "briefDescription" : "Achieve cohesive visual and messaging branding that resonates with your audience, establishing a strong first impression and brand loyalty."
+    },
+    {
+      "name" : "Clear Communication with Stakeholders",
+      "createdAt" : 799739640.796129,
+      "briefDescription" : "Facilitate better communication and decision-making by providing a shared understanding of the product vision and user needs."
+    },
+    {
+      "name" : "User Discovery",
+      "createdAt" : 799739666.709312,
+      "briefDescription" : "Utilize targeted marketing and partnerships to identify and engage your earliest adopters, creating a real-world signal to validate your product concept."
+    },
+    {
+      "name" : "Reduced risk",
+      "createdAt" : 799739759.52124,
+      "briefDescription" : "My taking the edge of some of the hard parts of entrepreneurship Flicker can reduce the risk of building something no one wants."
+    },
+    {
+      "name" : "Comprehensive User Persona Mapping",
+      "createdAt" : 799739781.319182,
+      "briefDescription" : "Support the creation of detailed user personas to better understand target audiences and tailor offerings accordingly."
+    }
+  ]
+}

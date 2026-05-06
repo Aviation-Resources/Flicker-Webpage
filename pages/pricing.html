@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="../images/favicon.png"/>
+  <link rel="apple-touch-icon" href="../images/apple-touch-icon.png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/tokens.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <header class="banner">
+    <a href="../index.html" class="logo-link">
+      <img class="logo" src="../images/logo-46419724.png" alt="Flicker Logo" />
+    </a>
+    <div class="site-name">Flicker</div>
+    <div class="spacer"></div>
+    <nav class="nav-links">
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-menu">
+        <a href="pricing.html">Pricing</a>
+        <a href="support.html">Support</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section class="pricing-hero">
+      <h1>Honest Pricing</h1>
+      <p class="pricing-lede">We believe the best price is no price. Wherever it's possible, Flicker runs AI directly on your device — keeping features free, fast, and private. When that's not possible, we charge only what it costs us, plus a small margin to keep the lights on.</p>
+    </section>
+
+    <section class="pricing-cards">
+      <article class="pricing-card pricing-card--free">
+        <span class="pricing-card__icon"><i data-lucide="cpu"></i></span>
+        <div class="pricing-card__price">Free</div>
+        <h2 class="pricing-card__title">Edge AI</h2>
+        <p class="pricing-card__desc">Most of Flicker's intelligence runs locally on your device using on-device models. No servers, no usage caps, no bill — just instant results that never leave your phone.</p>
+      </article>
+      <article class="pricing-card">
+        <span class="pricing-card__icon"><i data-lucide="cloud"></i></span>
+        <div class="pricing-card__price">At Cost<span class="pricing-card__price-mod">+ small margin, per result</span></div>
+        <h2 class="pricing-card__title">Cloud AI</h2>
+        <p class="pricing-card__desc">A few features — currently just high-quality image generation — need cloud-scale models that can't run on a phone. We pass through the provider's actual cost and add a small margin. You only pay when you choose to keep the result.</p>
+      </article>
+    </section>
+
+    <p class="pricing-footnote">Today this applies to image generation only. If we ever add another paid feature, the rule stays the same: at cost, plus a small margin, paid only when you keep the output.</p>
+  </main>
+
+  <script src="../js/nav.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

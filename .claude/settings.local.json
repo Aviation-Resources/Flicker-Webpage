@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /Users/aviationresources/Desktop/Flicker-Webpage status)",
+      "Bash(git -C /Users/aviationresources/Desktop/Flicker-Webpage branch)",
+      "Bash(git -C /Users/aviationresources/Desktop/Flicker-Webpage restore index.template.html)",
+      "Bash(git -C /Users/aviationresources/Desktop/Flicker-Webpage checkout -b page-updates)"
+    ]
+  }
+}
